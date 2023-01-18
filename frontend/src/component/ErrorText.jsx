@@ -11,6 +11,6 @@ export default function ErrorText({errors, field, data}) {
     }
 
     return(
-     <small className ='text-danger'>{errors[field]}</small>
+    <small className ='text-danger'>{errors[field]}</small>
 )
 }

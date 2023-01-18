@@ -25,7 +25,7 @@ const Login = () => {
   function handleSubmit(event){
     console.log(event.preventDefault());
     
-    axios.post('${process.env.PORT}/users/login',{
+    axios.post('${ process.env.REACT_APP_SERVER_URL}/users/login',{
         email,
         password,
     }) 
@@ -94,8 +94,9 @@ function handleChange(e) {
                                 onChange={handleChange} value={data.email}
                                 aria-describedby="emailHelp" />
                                 <ErrorText errors={errors}
-                                field="name"
-                                data={data}/>
+                                field="email"
+                                data={data}
+                                />
   
                             </div>
                             <div className="mb-3">
@@ -104,7 +105,7 @@ function handleChange(e) {
                                 name="password" onChange={handleChange} value={data.password} 
                                 />
                                 <ErrorText errors={errors}
-                                field="name" data={data} />
+                                field="password" data={data} />
                             </div>
                             <div>
                                     <label htmlFor="is_checked" className="form-check-label required">Agree Terms & Conditions</label>
